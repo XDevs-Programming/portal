@@ -12,8 +12,6 @@ const commissionRoutes = require("./routes/commission.routes");
 const reviewRoutes = require("./routes/review.routes");
 const adminRoutes = require("./routes/admin.routes");
 
-const notFound = require("./middleware/notFound");
-const errorHandler = require("./middleware/errorHandler");
 
 const app = express();
 
@@ -207,27 +205,6 @@ app.use("/api/commissions", commissionRoutes);
 app.use("/api/reviews", reviewRoutes);
 app.use("/api/admin", adminRoutes);
 
-/*
-|--------------------------------------------------------------------------
-| 404 handler
-|--------------------------------------------------------------------------
-|
-| This must appear after all valid routes.
-|
-*/
-
-app.use(notFound);
-
-/*
-|--------------------------------------------------------------------------
-| Error handler
-|--------------------------------------------------------------------------
-|
-| This must always be the final middleware.
-|
-*/
-
-app.use(errorHandler);
 
 /*
 |--------------------------------------------------------------------------

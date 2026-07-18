@@ -205,7 +205,6 @@ app.use("/api/commissions", commissionRoutes);
 app.use("/api/reviews", reviewRoutes);
 app.use("/api/admin", adminRoutes);
 
-
 /*
 |--------------------------------------------------------------------------
 | Start server

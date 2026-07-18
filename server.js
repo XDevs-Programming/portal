@@ -1,7 +1,3 @@
-const dns = require("node:dns");
-
-dns.setServers(["192.168.1.1"]);
-
 require("dotenv").config();
 
 const express = require("express");
